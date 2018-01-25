@@ -15,6 +15,8 @@ public class FruitQuiz extends KeyAdapter {
 	void makeQuestions() {
 		question1 = new JLabel(
 				"<html>Which is not a real animal? <br> A: Flubber Monkey <br> B: Pink Fairy Armadillo <br> C: Dumbo Octopus</html>");
+		question2 = new JLabel(
+				"<html>Which is not a real animal? <br> A: Flubber Monkey <br> B: Pink Fairy Armadillo <br> C: Dumbo Octopus</html>");
 		// 11. Make another question called "question2"
 		
 	}
@@ -23,26 +25,32 @@ public class FruitQuiz extends KeyAdapter {
 	public void keyPressed(KeyEvent arg0) {
 		int keyCode = arg0.getKeyCode();
 		// 1. Print out the key code variable
-		
+		System.out.println(keyCode);
 
 		// 2. Make 3 variables that hold the key codes for apple, banana and carrot
-
+		int A = 65;
+		int B = 66;
+		int C = 67;
 		
 
 		
 		if (question1.isShowing()) {
 			// 3. If they touched the right fruit, do steps 4 and 7
+			if(keyCode == A) {
+				
 			
 				// 4. Call the correct() method
-				
+				correct();
 				// 7. Use the nextQuestion() method to go to question2
-			
-			
+			nextQuestion(question2 );
+			}
 			// 8. else (if they touched something else)
+			else {
 				
-				// 9. Call the incorrect() method
 			
-
+				// 9. Call the incorrect() method
+			incorrect();
+			}
 		}
 
 		// 12. If question2 is showing,
@@ -55,7 +63,7 @@ public class FruitQuiz extends KeyAdapter {
 		// the default package. It must be a .wav file. 
 		// There are lots on freesound.org
 		// 6. Use the playSound method to play your sound
-
+		playSound("Fruit Quiz Sound.wav");
 
 	}
 
