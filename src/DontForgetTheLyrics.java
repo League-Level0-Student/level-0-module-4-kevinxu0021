@@ -20,7 +20,7 @@ public class DontForgetTheLyrics {
 	
 	public static void main(String[] args) {
 		// 4. Make a pop-up to explain the game.
-
+JOptionPane.showMessageDialog(null, "<html><b>This is how to play the game:</b><ol><li>The computer will play the song.</li><li></html>");
 		// 5. Use the playSound method to play your song.
 
 		// 6. Make a pop-up for the player to type their answer.
